@@ -1,28 +1,39 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <app-header></app-header>
+    <div>
+      <app-featured></app-featured>
+      <app-menu></app-menu>
+      <app-call-us></app-call-us>
+        <app-news-letter></app-news-letter>
+    </div>
+    <app-footer></app-footer>
   </div>
+
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import appHeader from './components/Heade-Footer/Header.vue';
+  import appFooter from './components/Heade-Footer/Footer.vue';
+  import appFeatured from './components/Featured/Index.vue';
+  import appMenu from './components/Menu/Index.vue';
+  import appCallUs from './components/Call-Us/Index.vue'
+  import appNewsLetter from './components/NewsLetter/Index.vue'
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
+
+  export default {
+      components:{
+        appHeader,
+        appFooter,
+        appFeatured,
+        appMenu,
+        appCallUs,
+          appNewsLetter
+      }
   }
-}
+  
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import "./assets/style.css";
+  @import url('https://fonts.googleapis.com/css?family=Arizonia|Monoton|Roboto:400,500,700&display=swap');
 </style>
